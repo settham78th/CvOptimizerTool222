@@ -59,18 +59,22 @@ def send_api_request(prompt, max_tokens=2000):
 
 def optimize_cv(cv_text, job_description):
     """
-    Create an optimized version of CV using advanced AI processing
+    Create an optimized version of CV using advanced AI processing with strict fact preservation
     """
     prompt = f"""
-    TASK: Stwórz całkowicie nową, spersonalizowaną wersję CV precyzyjnie dopasowaną do wymagań stanowiska.
+    TASK: Zoptymalizuj istniejące CV pod kątem wymagań stanowiska, zachowując ABSOLUTNĄ ZGODNOŚĆ z faktami.
+
+    KRYTYCZNE ZASADY:
+    1. ZAKAZ ZMYŚLANIA: Nie wolno dodawać żadnych fikcyjnych informacji, doświadczeń czy umiejętności
+    2. ZAKAZ MODYFIKACJI DAT: Zachowaj oryginalne daty zatrudnienia
+    3. ZAKAZ DODAWANIA: Nie dodawaj nieistniejących certyfikatów, szkoleń czy projektów
     
     Kluczowe wytyczne optymalizacji:
-    1. Głęboka analiza i transformacja doświadczenia:
-       - Przeprowadź szczegółową analizę każdego stanowiska pod kątem wymagań nowej roli
-       - Zidentyfikuj i wyeksponuj transferowalne umiejętności
-       - Dodaj wymierzalne rezultaty i osiągnięcia (%, liczby, skala projektów)
-       - Użyj profesjonalnego, branżowego słownictwa charakterystycznego dla danego sektora
-       - Stwórz nowe opisy stanowisk wykorzystując słowa kluczowe z ogłoszenia
+    1. Precyzyjna analiza i reframing istniejącego doświadczenia:
+       - Znajdź i podkreśl RZECZYWISTE umiejętności transferowalne
+       - Użyj ISTNIEJĄCYCH osiągnięć, przekładając je na kontekst nowej roli
+       - Zastosuj odpowiednie słownictwo branżowe do FAKTYCZNYCH obowiązków
+       - Zachowaj wszystkie oryginalne informacje, zmieniając tylko sposób ich prezentacji
     
     2. Zaawansowana personalizacja:
        - Dopasuj tone of voice do kultury firmy i branży
@@ -84,23 +88,26 @@ def optimize_cv(cv_text, job_description):
        - Dodaj konkretne przykłady zastosowania każdej kluczowej umiejętności
        - Uwzględnij certyfikaty i szkolenia istotne dla stanowiska
     
-    4. Dostosowanie struktury i formatowania:
-       - Zastosuj przejrzystą, profesjonalną hierarchię informacji
-       - Użyj bullet pointów dla lepszej czytelności
-       - Zachowaj spójny format dat i opisów
-       - Zoptymalizuj pod kątem ATS używając standardowych nagłówków
+    4. Rygorystyczna weryfikacja treści:
+       - ZAWSZE porównuj z oryginalnym CV przed dodaniem informacji
+       - Używaj wyłącznie dat i faktów z oryginalnego dokumentu
+       - Zachowaj wszystkie oryginalne stanowiska i nazwy firm
+       - Nie dodawaj ani nie usuwaj miejsc pracy
     
-    5. Elementy dodatkowe:
-       - Dodaj sekcję projektów specjalnych jeśli są istotne
-       - Uwzględnij osiągnięcia i wyróżnienia branżowe
-       - Dodaj linki do portfolio/projektów jeśli są dostępne
-       - Uwzględnij wolontariat lub działalność dodatkową wspierającą profil zawodowy
+    5. Optymalizacja prezentacji:
+       - Reorganizuj ISTNIEJĄCE informacje pod kątem relevance
+       - Używaj bullet pointów dla lepszej czytelności
+       - Podkreślaj rzeczywiste osiągnięcia powiązane z nową rolą
+       - Stosuj profesjonalne formatowanie ATS-friendly
     
-    WAŻNE ZASADY:
-    - Zachowaj pełną spójność z prawdą zawartą w oryginalnym CV
-    - Każda sekcja musi być napisana od nowa z fokusem na nowe stanowisko
-    - Używaj aktywnych czasowników i konkretnych przykładów
-    - Odpowiedz w tym samym języku co oryginalne CV
+    ZASADY KRYTYCZNE:
+    - ZERO TOLERANCJI dla fikcyjnych danych
+    - Każda informacja MUSI być oparta na oryginalnym CV
+    - Skupiaj się na REALNYM potencjale i transferowalnych umiejętnościach
+    - Używaj wyłącznie POTWIERDZONYCH osiągnięć
+    - W razie wątpliwości, zachowaj oryginalną treść
+    
+    Język odpowiedzi: zachowaj język oryginalnego CV
     
     DANE:
     
