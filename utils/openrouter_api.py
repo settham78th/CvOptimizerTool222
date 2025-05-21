@@ -61,7 +61,27 @@ def optimize_cv(cv_text, job_description):
     Create an optimized version of CV with enhanced experience and skills extraction
     """
     prompt = f"""
-    TASK: Przeprowadź profesjonalną analizę CV i stwórz ulepszoną wersję, zachowując następujące zasady:
+    TASK: Przeprowadź szczegółową analizę CV i stwórz maksymalnie dopasowaną wersję pod kątem stanowiska. Wykonaj następujące kroki:
+
+    1. Analiza wstępna CV:
+       - Identyfikacja kluczowych kompetencji i doświadczeń
+       - Wykrycie unikalnych osiągnięć i projektów
+       - Analiza poziomu zaawansowania w każdej umiejętności
+       - Wyodrębnienie stylu komunikacji i prezentacji
+
+    2. Analiza wymagań stanowiska:
+       - Identyfikacja kluczowych wymagań i oczekiwań
+       - Określenie priorytetowych kompetencji
+       - Analiza branży i kontekstu biznesowego
+       - Wyodrębnienie specyficznych technologii i narzędzi
+
+    3. Dopasowanie i optymalizacja:
+       - Priorytetyzacja doświadczeń najlepiej pasujących do stanowiska
+       - Dostosowanie języka i terminologii do branży
+       - Podkreślenie transferowalnych umiejętności
+       - Uwypuklenie osiągnięć najbardziej relewantnych dla roli
+
+    4. Szczegółowa ekstrakcja informacji:
 
     1. Dokładnie analizuj i prezentuj rzeczywiste doświadczenie zawodowe:
        - Wykorzystuj konkretne, mierzalne osiągnięcia z historii zawodowej
