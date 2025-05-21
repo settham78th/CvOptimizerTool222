@@ -1,10 +1,9 @@
 modules = ["python-3.11"]
 [nix]
-packages = ["openssl", "postgresql", "unzipNLS"]
-channel = "stable-24_05"
+packages = ["unzipNLS"]
 
 [workflows]
-runButton = "Project"
+runButton = "Run"
 
 [[workflows.workflow]]
 name = "Run"
@@ -23,29 +22,7 @@ mode = "sequential"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "python app.py"
-
-[[workflows.workflow]]
-name = "Project"
-mode = "parallel"
-author = "agent"
-
-[[workflows.workflow.tasks]]
-task = "workflow.run"
-args = "Start application"
-
-[[workflows.workflow]]
-name = "Start application"
-author = "agent"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "gunicorn --bind 0.0.0.0:5000 --reuse-port --reload main:app"
-waitForPort = 5000
 
 [[ports]]
 localPort = 5000
 externalPort = 80
-
-[deployment]
-deploymentTarget = "autoscale"
-run = ["gunicorn", "--bind", "0.0.0.0:5000", "main:app"]
