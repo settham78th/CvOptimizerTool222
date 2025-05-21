@@ -59,22 +59,47 @@ def send_api_request(prompt, max_tokens=2000):
 
 def optimize_cv(cv_text, job_description):
     """
-    Create an optimized version of CV using advanced AI processing with strict fact preservation
+    Create an optimized version of CV with enhanced experience and skills extraction
     """
     prompt = f"""
-    TASK: Zoptymalizuj istniejące CV pod kątem wymagań stanowiska, zachowując ABSOLUTNĄ ZGODNOŚĆ z faktami.
+    TASK: Przeprowadź dogłębną analizę CV i stwórz ulepszoną wersję, maksymalnie wykorzystując istniejące informacje.
 
-    KRYTYCZNE ZASADY:
-    1. ZAKAZ ZMYŚLANIA: Nie wolno dodawać żadnych fikcyjnych informacji, doświadczeń czy umiejętności
-    2. ZAKAZ MODYFIKACJI DAT: Zachowaj oryginalne daty zatrudnienia
-    3. ZAKAZ DODAWANIA: Nie dodawaj nieistniejących certyfikatów, szkoleń czy projektów
+    PROCES ANALIZY I OPTYMALIZACJI:
+    1. Szczegółowa ekstrakcja doświadczenia:
+       - Zidentyfikuj i rozwiń WSZYSTKIE osiągnięcia z każdego stanowiska
+       - Wydobądź ukryte umiejętności z opisów projektów
+       - Przekształć podstawowe obowiązki w mierzalne osiągnięcia
+       - Znajdź i podkreśl wszystkie sukcesy, nawet te nie wymienione wprost
     
-    Kluczowe wytyczne optymalizacji:
-    1. Precyzyjna analiza i reframing istniejącego doświadczenia:
-       - Znajdź i podkreśl RZECZYWISTE umiejętności transferowalne
-       - Użyj ISTNIEJĄCYCH osiągnięć, przekładając je na kontekst nowej roli
-       - Zastosuj odpowiednie słownictwo branżowe do FAKTYCZNYCH obowiązków
-       - Zachowaj wszystkie oryginalne informacje, zmieniając tylko sposób ich prezentacji
+    2. Pogłębiona analiza umiejętności:
+       - Stwórz szczegółową mapę kompetencji technicznych i miękkich
+       - Określ poziom zaawansowania każdej umiejętności na podstawie kontekstu
+       - Zidentyfikuj umiejętności transferowalne z każdego doświadczenia
+       - Wyodrębnij kompetencje z projektów i zadań
+    
+    3. Optymalizacja opisów:
+       - Użyj mocnych czasowników dla każdego osiągnięcia
+       - Dodaj kontekst i skalę do każdego projektu
+       - Pokaż wpływ działań na firmę/zespół
+       - Wyraź osiągnięcia w liczbach gdzie to możliwe
+    
+    4. Ekstrakcja dodatkowych kompetencji:
+       - Przeanalizuj każdy projekt pod kątem wykorzystanych technologii
+       - Zidentyfikuj wszystkie role i odpowiedzialności w zespole
+       - Wydobądź informacje o zarządzaniu zasobami i budżetami
+       - Znajdź przykłady rozwiązywania problemów i innowacji
+    
+    5. Optymalizacja sekcji edukacji i szkoleń:
+       - Wydobądź istotne projekty i prace badawcze
+       - Zidentyfikuj kluczowe kursy i ich praktyczne zastosowanie
+       - Połącz wiedzę teoretyczną z doświadczeniem praktycznym
+       - Uwypuklij osiągnięcia akademickie i pozaakademickie
+    
+    6. Szczegółowa analiza projektów:
+       - Rozpisz każdy projekt według struktury: cel - wyzwanie - rozwiązanie - rezultat
+       - Wydobądź informacje o współpracy z interesariuszami
+       - Zidentyfikuj wykorzystane metodologie i najlepsze praktyki
+       - Pokaż wpływ na biznes i mierzalne rezultaty
     
     2. Zaawansowana personalizacja:
        - Dopasuj tone of voice do kultury firmy i branży
