@@ -62,100 +62,81 @@ def optimize_cv(cv_text, job_description):
     Create an optimized version of CV with enhanced experience and skills extraction
     """
     prompt = f"""
-    TASK: Przeprowadź profesjonalną analizę CV i stwórz ulepszoną wersję, która:
+    TASK: Przeprowadź KOMPLEKSOWĄ analizę i przebudowę CV, tworząc w pełni profesjonalną wersję z ulepszonymi opisami doświadczenia:
 
-    1. Dokładnie analizuje każde doświadczenie zawodowe:
-       - Wydobywa konkretne, mierzalne osiągnięcia
-       - Prezentuje rzeczywiste umiejętności w profesjonalny sposób
-       - Używa precyzyjnego, branżowego języka
-       - Zachowuje spójność językową i merytoryczną
+    1. DOGŁĘBNA PRZEBUDOWA DOŚWIADCZENIA ZAWODOWEGO:
+       - Zidentyfikuj wszystkie stanowiska i pracodawców
+       - Napisz profesjonalne, rozszerzone opisy dla KAŻDEGO stanowiska
+       - Stwórz dla każdej pracy 3-5 konkretnych bullet pointów z osiągnięciami i zadaniami
+       - Używaj mocnych, aktywnych czasowników (zarządzałem, wdrożyłem, zoptymalizowałem)
+       - Dodaj mierzalne rezultaty tam, gdzie to możliwe (%, liczby, skala projektów)
+       - Popraw niejasne lub ogólnikowe opisy na precyzyjne i profesjonalne
     
-    2. Weryfikuje i optymalizuje każdą sekcję:
-       - Usuwa nieprofesjonalne lub nieistotne informacje
-       - Poprawia błędy językowe i stylistyczne
-       - Zachowuje tylko istotne z perspektywy zawodowej informacje
-       - Prezentuje umiejętności w sposób odpowiedni dla branży
+    2. CAŁKOWITE UPORZĄDKOWANIE STRUKTURY:
+       - Popraw wszystkie sekcje, które są w niewłaściwych miejscach
+       - Ustandaryzuj nazwy sekcji (DOŚWIADCZENIE ZAWODOWE, WYKSZTAŁCENIE, UMIEJĘTNOŚCI)
+       - Uporządkuj chronologicznie doświadczenie zawodowe (od najnowszego)
+       - Przenieś doświadczenie zawodowe z niewłaściwych sekcji do właściwej sekcji
     
-    3. Wzmacnia profesjonalny przekaz:
-       - Koncentruje się na kluczowych kompetencjach
-       - Podkreśla realne osiągnięcia
-       - Używa profesjonalnego słownictwa
-       - Zachowuje spójny, biznesowy ton
-
-    PROCES ANALIZY I OPTYMALIZACJI:
-    1. WERYFIKACJA STRUKTURY I USUWANIE BŁĘDÓW:
-       - Zidentyfikuj i popraw błędy w strukturze CV (np. sekcje w niewłaściwych miejscach)
-       - Usuń wszelkie fragmenty tekstu sugerujące generowanie przez AI
-       - Popraw literówki i błędy gramatyczne
-       - Usuń zduplikowane informacje i niespójności
-       - Usuń wszelkie informacje niezwiązane z profesjonalnym CV
-       
-    2. Szczegółowa ekstrakcja doświadczenia:
-       - Zidentyfikuj i rozwiń WSZYSTKIE osiągnięcia z każdego stanowiska
-       - Wydobądź ukryte umiejętności z opisów projektów
-       - Przekształć podstawowe obowiązki w mierzalne osiągnięcia
-       - Znajdź i podkreśl wszystkie sukcesy, nawet te nie wymienione wprost
+    3. PROFESJONALIZACJA UMIEJĘTNOŚCI:
+       - Stwórz przejrzystą, uporządkowaną sekcję umiejętności
+       - Podziel na kategorie: techniczne, miękkie, branżowe
+       - Usuń ogólnikowe określenia, zastąp je konkretnymi umiejętnościami
+       - Dostosuj umiejętności do standardów branżowych
     
-    3. Pogłębiona analiza umiejętności:
-       - Stwórz szczegółową mapę kompetencji technicznych i miękkich
-       - Określ poziom zaawansowania każdej umiejętności na podstawie kontekstu
-       - Zidentyfikuj umiejętności transferowalne z każdego doświadczenia
-       - Wyodrębnij kompetencje z projektów i zadań
+    4. STWORZENIE PROFESJONALNEGO PODSUMOWANIA ZAWODOWEGO:
+       - Napisz zwięzły profil zawodowy na początek CV (3-4 zdania)
+       - Podkreśl najważniejsze doświadczenie i główne atuty
+       - Dostosuj do oczekiwań branżowych
     
-    4. Optymalizacja opisów:
-       - Użyj mocnych czasowników dla każdego osiągnięcia
-       - Dodaj kontekst i skalę do każdego projektu
-       - Pokaż wpływ działań na firmę/zespół
-       - Wyraź osiągnięcia w liczbach gdzie to możliwe
+    5. WERYFIKACJA I POPRAWA WSZYSTKICH TREŚCI:
+       - Popraw wszystkie błędy językowe i stylistyczne
+       - Usuń zduplikowane informacje
+       - Napraw niespójności w formatowaniu
+       - Usuń wszelkie fragmenty sugerujące generowanie przez AI
+       - Popraw każdy niejasny lub chaotyczny fragment tekstu
+       - Napraw wszystkie dziwne ciągi znaków lub losowy tekst
     
-    5. Ekstrakcja dodatkowych kompetencji:
-       - Przeanalizuj każdy projekt pod kątem wykorzystanych technologii
-       - Zidentyfikuj wszystkie role i odpowiedzialności w zespole
-       - Wydobądź informacje o zarządzaniu zasobami i budżetami
-       - Znajdź przykłady rozwiązywania problemów i innowacji
+    PROCES REALIZACJI:
+    1. ANALIZA I IDENTYFIKACJA PROBLEMÓW:
+       - Zidentyfikuj wszystkie problemy strukturalne i niejasne elementy
+       - Znajdź wszystkie treści, które należy przebudować lub dopracować
+       - Rozpoznaj, które sekcje są niekompletne lub błędnie sformatowane
     
-    6. Optymalizacja sekcji edukacji i szkoleń:
-       - Wydobądź istotne projekty i prace badawcze
-       - Zidentyfikuj kluczowe kursy i ich praktyczne zastosowanie
-       - Połącz wiedzę teoretyczną z doświadczeniem praktycznym
-       - Uwypuklij osiągnięcia akademickie i pozaakademickie
+    2. KOMPLEKSOWA PRZEBUDOWA TREŚCI:
+       - Napisz NOWE, PROFESJONALNE opisy doświadczenia zawodowego
+       - Popraw wszystkie istniejące opisy na bardziej szczegółowe i konkretne
+       - Dostosuj język do standardów profesjonalnych CV
+       - Zastąp ogólnikowe określenia konkretnymi osiągnięciami
+       - Użyj profesjonalnego języka branżowego
     
-    7. Zaawansowana personalizacja:
-       - Dopasuj tone of voice do kultury firmy i branży
-       - Uwzględnij specyficzne technologie i metodologie wymienione w ogłoszeniu
-       - Dodaj sekcję highlight'ów dopasowaną do priorytetowych wymagań
-       - Stwórz spersonalizowane podsumowanie zawodowe podkreślające najważniejsze atuty
+    3. FINALNA WERYFIKACJA:
+       - Sprawdź, czy zachowano wszystkie istotne informacje z oryginalnego CV
+       - Zweryfikuj, czy nie dodano fikcyjnych informacji
+       - Upewnij się, że struktura jest logiczna i spójna
+       - Sprawdź, czy język jest profesjonalny i odpowiedni do branży
     
-    8. Optymalizacja umiejętności i kompetencji:
-       - Podziel umiejętności na kategorie: techniczne, miękkie, branżowe
-       - Określ poziom zaawansowania w skali 1-5 dla kluczowych kompetencji
-       - Dodaj konkretne przykłady zastosowania każdej kluczowej umiejętności
-       - Uwzględnij certyfikaty i szkolenia istotne dla stanowiska
+    ZASADY TWORZENIA OPISÓW STANOWISK:
+    - Każdy opis stanowiska musi zawierać:
+      1. Nazwę firmy i stanowiska (zachowaj oryginalne nazwy)
+      2. Okres zatrudnienia (zachowaj oryginalne daty)
+      3. 3-5 bullet pointów z konkretnymi zadaniami i osiągnięciami
+      4. Wymierne rezultaty i obszary odpowiedzialności
     
-    9. RYGORYSTYCZNA WERYFIKACJA TREŚCI:
-       - ZAWSZE porównuj z oryginalnym CV przed dodaniem informacji
-       - Używaj wyłącznie dat i faktów z oryginalnego dokumentu
-       - Zachowaj wszystkie oryginalne stanowiska i nazwy firm
-       - Nie dodawaj ani nie usuwaj miejsc pracy
-       - USUWAJ wszelkie frazy lub informacje, które wyglądają na wygenerowane przez AI
-       - Naprawiaj wszelkie niespójności pomiędzy sekcjami
-       - Poprawiaj zdania, które nie mają sensu lub zawierają błędy semantyczne
-    
-    10. Optymalizacja prezentacji:
-       - Reorganizuj ISTNIEJĄCE informacje pod kątem relevance
-       - Używaj bullet pointów dla lepszej czytelności
-       - Podkreślaj rzeczywiste osiągnięcia powiązane z nową rolą
-       - Stosuj profesjonalne formatowanie ATS-friendly
+    - Format każdego bullet pointu:
+      1. Zacznij od mocnego czasownika (realizowałem, wdrożyłem, koordynowałem)
+      2. Opisz konkretne zadanie lub projekt
+      3. Dodaj kontekst (skala, zespół, budżet, technologie)
+      4. Jeśli możliwe, zakończ wymiernym rezultatem
     
     ZASADY KRYTYCZNE:
-    - ⚠️ SPRAWDŹ, czy sekcje są we właściwych miejscach (np. czy doświadczenie zawodowe nie zostało umieszczone w sekcji zainteresowań)
-    - ⚠️ SPRAWDŹ, czy w tekście nie ma błędnych danych, dziwnych kodów lub losowych ciągów znaków
-    - ZERO TOLERANCJI dla fikcyjnych danych
-    - Każda informacja MUSI być oparta na oryginalnym CV
-    - Skupiaj się na REALNYM potencjale i transferowalnych umiejętnościach
-    - Używaj wyłącznie POTWIERDZONYCH osiągnięć
-    - W razie wątpliwości, zachowaj oryginalną treść
-    - USUWAJ wszystkie frazy sugerujące, że tekst został wygenerowany przez AI
+    - POPRAW KAŻDY element doświadczenia zawodowego
+    - NAPRAW wszystkie błędy w strukturze CV
+    - NIE DODAWAJ fikcyjnych informacji, stanowisk czy osiągnięć
+    - ZACHOWAJ wszystkie oryginalne nazwy firm i stanowisk
+    - ZACHOWAJ oryginalne daty zatrudnienia
+    - USUŃ wszelkie wzmianki o generowaniu przez AI
+    - USUŃ wszelkie niespójne lub bezsensowne ciągi znaków
     
     Język odpowiedzi: zachowaj język oryginalnego CV
     
@@ -167,7 +148,7 @@ def optimize_cv(cv_text, job_description):
     Oryginalne CV:
     {cv_text}
     
-    Zwróć tylko zoptymalizowane CV w formacie tekstowym, bez dodatkowych komentarzy.
+    Zwróć tylko zoptymalizowane, kompletnie przebudowane CV w formacie tekstowym, bez dodatkowych komentarzy.
     """
     
     return send_api_request(prompt, max_tokens=2500)
