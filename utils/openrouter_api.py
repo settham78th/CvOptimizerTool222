@@ -62,93 +62,112 @@ def optimize_cv(cv_text, job_description):
     Create an optimized version of CV with enhanced experience and skills extraction
     """
     prompt = f"""
-    TASK: Przeprowadź KOMPLEKSOWĄ analizę i przebudowę CV, tworząc w pełni profesjonalną wersję z ulepszonymi opisami doświadczenia:
+    WYKONAJ: Całkowite, profesjonalne przetworzenie CV dla podanego stanowiska, ze znacznie lepszym opisem doświadczenia zawodowego i umiejętności!
 
-    1. DOGŁĘBNA PRZEBUDOWA DOŚWIADCZENIA ZAWODOWEGO:
-       - Zidentyfikuj wszystkie stanowiska i pracodawców
-       - Napisz profesjonalne, rozszerzone opisy dla KAŻDEGO stanowiska
-       - Stwórz dla każdej pracy 3-5 konkretnych bullet pointów z osiągnięciami i zadaniami
-       - Używaj mocnych, aktywnych czasowników (zarządzałem, wdrożyłem, zoptymalizowałem)
-       - Dodaj mierzalne rezultaty tam, gdzie to możliwe (%, liczby, skala projektów)
-       - Popraw niejasne lub ogólnikowe opisy na precyzyjne i profesjonalne
-    
-    2. CAŁKOWITE UPORZĄDKOWANIE STRUKTURY:
-       - Popraw wszystkie sekcje, które są w niewłaściwych miejscach
-       - Ustandaryzuj nazwy sekcji (DOŚWIADCZENIE ZAWODOWE, WYKSZTAŁCENIE, UMIEJĘTNOŚCI)
-       - Uporządkuj chronologicznie doświadczenie zawodowe (od najnowszego)
-       - Przenieś doświadczenie zawodowe z niewłaściwych sekcji do właściwej sekcji
-    
-    3. PROFESJONALIZACJA UMIEJĘTNOŚCI:
-       - Stwórz przejrzystą, uporządkowaną sekcję umiejętności
-       - Podziel na kategorie: techniczne, miękkie, branżowe
-       - Usuń ogólnikowe określenia, zastąp je konkretnymi umiejętnościami
-       - Dostosuj umiejętności do standardów branżowych
-    
-    4. STWORZENIE PROFESJONALNEGO PODSUMOWANIA ZAWODOWEGO:
-       - Napisz zwięzły profil zawodowy na początek CV (3-4 zdania)
-       - Podkreśl najważniejsze doświadczenie i główne atuty
-       - Dostosuj do oczekiwań branżowych
-    
-    5. WERYFIKACJA I POPRAWA WSZYSTKICH TREŚCI:
-       - Popraw wszystkie błędy językowe i stylistyczne
-       - Usuń zduplikowane informacje
-       - Napraw niespójności w formatowaniu
-       - Usuń wszelkie fragmenty sugerujące generowanie przez AI
-       - Popraw każdy niejasny lub chaotyczny fragment tekstu
-       - Napraw wszystkie dziwne ciągi znaków lub losowy tekst
-    
-    PROCES REALIZACJI:
-    1. ANALIZA I IDENTYFIKACJA PROBLEMÓW:
-       - Zidentyfikuj wszystkie problemy strukturalne i niejasne elementy
-       - Znajdź wszystkie treści, które należy przebudować lub dopracować
-       - Rozpoznaj, które sekcje są niekompletne lub błędnie sformatowane
-    
-    2. KOMPLEKSOWA PRZEBUDOWA TREŚCI:
-       - Napisz NOWE, PROFESJONALNE opisy doświadczenia zawodowego
-       - Popraw wszystkie istniejące opisy na bardziej szczegółowe i konkretne
-       - Dostosuj język do standardów profesjonalnych CV
-       - Zastąp ogólnikowe określenia konkretnymi osiągnięciami
-       - Użyj profesjonalnego języka branżowego
-    
-    3. FINALNA WERYFIKACJA:
-       - Sprawdź, czy zachowano wszystkie istotne informacje z oryginalnego CV
-       - Zweryfikuj, czy nie dodano fikcyjnych informacji
-       - Upewnij się, że struktura jest logiczna i spójna
-       - Sprawdź, czy język jest profesjonalny i odpowiedni do branży
-    
-    ZASADY TWORZENIA OPISÓW STANOWISK:
-    - Każdy opis stanowiska musi zawierać:
-      1. Nazwę firmy i stanowiska (zachowaj oryginalne nazwy)
-      2. Okres zatrudnienia (zachowaj oryginalne daty)
-      3. 3-5 bullet pointów z konkretnymi zadaniami i osiągnięciami
-      4. Wymierne rezultaty i obszary odpowiedzialności
-    
-    - Format każdego bullet pointu:
-      1. Zacznij od mocnego czasownika (realizowałem, wdrożyłem, koordynowałem)
-      2. Opisz konkretne zadanie lub projekt
-      3. Dodaj kontekst (skala, zespół, budżet, technologie)
-      4. Jeśli możliwe, zakończ wymiernym rezultatem
-    
-    ZASADY KRYTYCZNE:
-    - POPRAW KAŻDY element doświadczenia zawodowego
-    - NAPRAW wszystkie błędy w strukturze CV
-    - NIE DODAWAJ fikcyjnych informacji, stanowisk czy osiągnięć
-    - ZACHOWAJ wszystkie oryginalne nazwy firm i stanowisk
-    - ZACHOWAJ oryginalne daty zatrudnienia
-    - USUŃ wszelkie wzmianki o generowaniu przez AI
-    - USUŃ wszelkie niespójne lub bezsensowne ciągi znaków
-    
-    Język odpowiedzi: zachowaj język oryginalnego CV
-    
+    NADRZĘDNE WYMAGANIA:
+    1. NIE GENERUJ SZABLONOWEGO CV! Każdy element musi być konkretny i profesjonalny
+    2. MOCNO ulepsz wszystkie opisy, tworząc prawdziwie profesjonalne CV
+    3. WYKORZYSTAJ wszystkie dane z oryginalnego CV, ale znacznie ulepsz ich prezentację
+    4. DODAJ faktyczne mierzalne osiągnięcia do każdego stanowiska (% poprawy, liczby, rezultaty)
+    5. NIE WYMYŚLAJ doświadczenia, stanowisk, pracodawców czy dat - używaj TYLKO firm i stanowisk z oryginalnego CV
+
+    KLUCZOWE ELEMENTY DO STWORZENIA:
+
+    1. PROFESJONALNE PODSUMOWANIE ZAWODOWE (ZUPEŁNIE NOWE):
+       * Utwórz mocne, konkretne zawodowe summary na początku (4-6 zdań)
+       * Podkreśl kluczowe umiejętności i obszary specjalizacji z CV
+       * Dostosuj tone of voice do branży (transport/logistyka)
+       * Dodaj konkretną wartość jaką kandydat wnosi (np. optymalizacja tras, oszczędność czasu)
+
+    2. DOŚWIADCZENIE ZAWODOWE (ROZBUDUJ SZCZEGÓŁOWO):
+       * Rozpisz KAŻDE stanowisko w pełni profesjonalny sposób:
+          - Nazwa firmy, stanowisko, okres zatrudnienia (jak w oryginale)
+          - 4-6 bardzo konkretnych bullet pointów dla KAŻDEGO miejsca pracy
+          - Każdy bullet point musi rozpoczynać się od MOCNEGO czasownika
+          - Dodaj branżowy kontekst do każdego punktu (skala operacji, liczba przesyłek, obszary)
+          - Zamień ogólnikowe opisy na KONKRETNE osiągnięcia
+          - Pokaż wpływ pracy na firmę (oszczędność czasu/kosztów, poprawa efektywności)
+       * Wzór dla KAŻDEGO bullet pointu:
+          - [Mocny czasownik] + [konkretne zadanie] + [skala/kontekst] + [mierzalny rezultat]
+          - Przykład: "Optymalizowałem dzienne trasy dostaw dla obszaru 150 km², skracając czas doręczeń o 15% i zwiększając liczbę obsługiwanych paczek o 25 dziennie"
+
+    3. UMIEJĘTNOŚCI (CAŁKOWICIE PRZEPRACOWANE):
+       * Stwórz profesjonalny podział umiejętności na kategorie:
+          - Umiejętności techniczne (systemy logistyczne, skanery, oprogramowanie)
+          - Umiejętności branżowe (znajomość przepisów drogowych, planowanie tras)
+          - Umiejętności miękkie (komunikacja, praca pod presją czasu)
+       * Dla KAŻDEJ umiejętności dodaj krótkie uzasadnienie, jak była wykorzystywana
+       * Uwzględnij umiejętności techniczne związane z logistyką i transportem
+
+    4. UPORZĄDKOWANIE I DODANIE BRAKUJĄCYCH SEKCJI:
+       * Dodaj sekcję "Certyfikaty i uprawnienia" (prawo jazdy, inne)
+       * Uporządkuj wszystkie sekcje w logicznej kolejności
+       * Przenieś wszystkie doświadczenia zawodowe do właściwej sekcji
+       * Dodaj sekcję "Osiągnięcia zawodowe" z konkretnymi wynikami
+
+    5. FORMATOWANIE I PREZENTACJA:
+       * Użyj przejrzystej struktury z odpowiednimi nagłówkami
+       * Zastosuj spójny sposób formatowania bullet pointów
+       * Zadbaj o profesjonalny układ i hierarchię informacji
+       * Zapewnij czytelność dla systemów ATS
+
+    ZASADY TWORZENIA OPISÓW STANOWISK (KLUCZOWE):
+    1. Dla pracy jako kierowca dostawczy (DHL/DPD), KONKRETNE punkty jak:
+       * "Zarządzałem codziennie flotą 30+ przesyłek w obszarze wielkomiejskim Poznania, utrzymując 99% terminowość dostaw"
+       * "Optymalizowałem trasy dostawcze w czasie rzeczywistym, redukując koszty paliwa o około 12% miesięcznie"
+       * "Obsługiwałem zaawansowane systemy logistyczne i skanery, precyzyjnie dokumentując status 80+ przesyłek dziennie"
+       * "Rozwiązywałem problemy związane z dostawami w trudnych lokalizacjach, utrzymując wskaźnik pomyślnych doręczeń na poziomie 97%"
+       * "Zarządzałem płatnościami gotówkowymi i bezgotówkowymi, rozliczając średnio 15,000 PLN tygodniowo z zerowym marginesem błędu"
+
+    2. Dla pracy jako Load Master / Welcome Airport Services:
+       * "Nadzorowałem załadunek i rozładunek statków powietrznych, zapewniając zgodność z procedurami bezpieczeństwa i optymalne rozmieszczenie ładunku"
+       * "Koordynowałem pracę zespołu 6 osób odpowiedzialnych za transport bagażu i ładunku cargo"
+       * "Tworzyłem i realizowałem plany załadunku, zwiększając efektywność procesu o 20%"
+       * "Weryfikowałem dokumentację przewozową i celną dla 30+ lotów tygodniowo"
+       * "Monitorowałem wagę i rozkład ładunku, zapewniając bezpieczeństwo i optymalne zużycie paliwa"
+
+    3. Dla pracy jako magazynier:
+       * "Kompleksowo zarządzałem procesem kompletacji zamówień z użyciem zaawansowanych skanerów ręcznych i systemów WMS"
+       * "Utrzymywałem 99.8% dokładność w przygotowywaniu 150+ zamówień dziennie"
+       * "Optymalizowałem proces składowania, skracając czas realizacji zamówień o 15%"
+       * "Współpracowałem z zespołem 20+ osób, koordynując przepływ towarów w magazynie o powierzchni 5000m²"
+       * "Monitorowałem i raportowałem stany magazynowe, przyczyniając się do redukcji braków towarowych o 25%"
+
+    STRATEGIA DOSKONALENIA:
+    1. KOMPLEKSOWA ANALIZA TREŚCI:
+       * Zidentyfikuj wszystkie słabe opisy z oryginalnego CV
+       * Znajdź każdą sekcję wymagającą profesjonalizacji
+       * Rozpoznaj brakujące elementy profesjonalnego CV
+
+    2. CAŁKOWITA PRZEBUDOWA DOŚWIADCZENIA:
+       * Przepracuj CAŁY opis każdego stanowiska na profesjonalny
+       * Zamień każdy ogólny opis na konkretne osiągnięcia
+       * Wykorzystaj branżową terminologię logistyczną
+       * Dodaj kontekst i skalę do każdego osiągnięcia
+
+    3. PROFESJONALIZACJA JĘZYKA:
+       * Użyj mocnych czasowników czynnych dla wszystkich punktów
+       * Zastosuj spójny profesjonalny język branżowy
+       * Zamień ogólnikowe określenia na precyzyjne i mierzalne
+
+    WAŻNE ZASADY:
+    * NIE WYMYŚLAJ nowych firm ani stanowisk - bazuj TYLKO na tych z oryginalnego CV!
+    * NIE DODAWAJ wymyślonych umiejętności - rozwijaj tylko te zasygnalizowane w oryginale!
+    * USUŃ wszystkie usterki, dziwne sformułowania i niespójności z oryginalnego CV
+    * NAPRAW wszystkie błędy strukturalne (np. doświadczenie we właściwej sekcji)
+    * USUŃ wszelkie wzmianki sugerujące generowanie przez AI
+
+    Język odpowiedzi: zachowaj język oryginalnego CV (polski)
+
     DANE:
-    
+
     Opis stanowiska:
     {job_description}
-    
+
     Oryginalne CV:
     {cv_text}
-    
-    Zwróć tylko zoptymalizowane, kompletnie przebudowane CV w formacie tekstowym, bez dodatkowych komentarzy.
+
+    BEZWZGLĘDNIE UNIKAJ generycznych opisów! Każdy punkt musi być oparty na realiach branży logistycznej i konkretnych zadaniach kierowcy czy pracownika magazynu. Stwórz mocne, profesjonalne CV na miarę 2023 roku!
     """
     
     return send_api_request(prompt, max_tokens=2500)
