@@ -1,4 +1,3 @@
-
 import os
 import json
 import logging
@@ -62,19 +61,19 @@ def optimize_cv(cv_text, job_description):
     Create an optimized version of CV with enhanced experience and skills extraction
     """
     prompt = f"""
-    TASK: Przeprowadź profesjonalną analizę CV i stwórz ulepszoną wersję, która:
+    TASK: Przeprowadź profesjonalną analizę CV i stwórz ulepszoną wersję, zachowując następujące zasady:
 
-    1. Dokładnie analizuje każde doświadczenie zawodowe:
-       - Wydobywa konkretne, mierzalne osiągnięcia
-       - Prezentuje rzeczywiste umiejętności w profesjonalny sposób
-       - Używa precyzyjnego, branżowego języka
-       - Zachowuje spójność językową i merytoryczną
-    
-    2. Weryfikuje i optymalizuje każdą sekcję:
-       - Usuwa nieprofesjonalne lub nieistotne informacje
-       - Poprawia błędy językowe i stylistyczne
-       - Zachowuje tylko istotne z perspektywy zawodowej informacje
-       - Prezentuje umiejętności w sposób odpowiedni dla branży
+    1. Dokładnie analizuj i prezentuj rzeczywiste doświadczenie zawodowe:
+       - Wykorzystuj konkretne, mierzalne osiągnięcia z historii zawodowej
+       - Podkreślaj realne umiejętności zdobyte na każdym stanowisku
+       - Używaj precyzyjnego języka branżowego
+       - Zachowuj spójność w opisach i formatowaniu
+
+    2. Zachowuj i optymalizuj prawdziwe informacje:
+       - Nie dodawaj fikcyjnych danych ani osiągnięć
+       - Bazuj wyłącznie na faktycznych doświadczeniach
+       - Wydobywaj wartość z istniejącego doświadczenia
+       - Prezentuj informacje w sposób profesjonalny i rzeczowy
     
     3. Wzmacnia profesjonalny przekaz:
        - Koncentruje się na kluczowych kompetencjach
