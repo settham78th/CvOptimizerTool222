@@ -83,72 +83,79 @@ def optimize_cv(cv_text, job_description):
        - Zachowuje spójny, biznesowy ton
 
     PROCES ANALIZY I OPTYMALIZACJI:
-    1. Szczegółowa ekstrakcja doświadczenia:
+    1. WERYFIKACJA STRUKTURY I USUWANIE BŁĘDÓW:
+       - Zidentyfikuj i popraw błędy w strukturze CV (np. sekcje w niewłaściwych miejscach)
+       - Usuń wszelkie fragmenty tekstu sugerujące generowanie przez AI
+       - Popraw literówki i błędy gramatyczne
+       - Usuń zduplikowane informacje i niespójności
+       - Usuń wszelkie informacje niezwiązane z profesjonalnym CV
+       
+    2. Szczegółowa ekstrakcja doświadczenia:
        - Zidentyfikuj i rozwiń WSZYSTKIE osiągnięcia z każdego stanowiska
        - Wydobądź ukryte umiejętności z opisów projektów
        - Przekształć podstawowe obowiązki w mierzalne osiągnięcia
        - Znajdź i podkreśl wszystkie sukcesy, nawet te nie wymienione wprost
     
-    2. Pogłębiona analiza umiejętności:
+    3. Pogłębiona analiza umiejętności:
        - Stwórz szczegółową mapę kompetencji technicznych i miękkich
        - Określ poziom zaawansowania każdej umiejętności na podstawie kontekstu
        - Zidentyfikuj umiejętności transferowalne z każdego doświadczenia
        - Wyodrębnij kompetencje z projektów i zadań
     
-    3. Optymalizacja opisów:
+    4. Optymalizacja opisów:
        - Użyj mocnych czasowników dla każdego osiągnięcia
        - Dodaj kontekst i skalę do każdego projektu
        - Pokaż wpływ działań na firmę/zespół
        - Wyraź osiągnięcia w liczbach gdzie to możliwe
     
-    4. Ekstrakcja dodatkowych kompetencji:
+    5. Ekstrakcja dodatkowych kompetencji:
        - Przeanalizuj każdy projekt pod kątem wykorzystanych technologii
        - Zidentyfikuj wszystkie role i odpowiedzialności w zespole
        - Wydobądź informacje o zarządzaniu zasobami i budżetami
        - Znajdź przykłady rozwiązywania problemów i innowacji
     
-    5. Optymalizacja sekcji edukacji i szkoleń:
+    6. Optymalizacja sekcji edukacji i szkoleń:
        - Wydobądź istotne projekty i prace badawcze
        - Zidentyfikuj kluczowe kursy i ich praktyczne zastosowanie
        - Połącz wiedzę teoretyczną z doświadczeniem praktycznym
        - Uwypuklij osiągnięcia akademickie i pozaakademickie
     
-    6. Szczegółowa analiza projektów:
-       - Rozpisz każdy projekt według struktury: cel - wyzwanie - rozwiązanie - rezultat
-       - Wydobądź informacje o współpracy z interesariuszami
-       - Zidentyfikuj wykorzystane metodologie i najlepsze praktyki
-       - Pokaż wpływ na biznes i mierzalne rezultaty
-    
-    2. Zaawansowana personalizacja:
+    7. Zaawansowana personalizacja:
        - Dopasuj tone of voice do kultury firmy i branży
        - Uwzględnij specyficzne technologie i metodologie wymienione w ogłoszeniu
        - Dodaj sekcję highlight'ów dopasowaną do priorytetowych wymagań
        - Stwórz spersonalizowane podsumowanie zawodowe podkreślające najważniejsze atuty
     
-    3. Optymalizacja umiejętności i kompetencji:
+    8. Optymalizacja umiejętności i kompetencji:
        - Podziel umiejętności na kategorie: techniczne, miękkie, branżowe
        - Określ poziom zaawansowania w skali 1-5 dla kluczowych kompetencji
        - Dodaj konkretne przykłady zastosowania każdej kluczowej umiejętności
        - Uwzględnij certyfikaty i szkolenia istotne dla stanowiska
     
-    4. Rygorystyczna weryfikacja treści:
+    9. RYGORYSTYCZNA WERYFIKACJA TREŚCI:
        - ZAWSZE porównuj z oryginalnym CV przed dodaniem informacji
        - Używaj wyłącznie dat i faktów z oryginalnego dokumentu
        - Zachowaj wszystkie oryginalne stanowiska i nazwy firm
        - Nie dodawaj ani nie usuwaj miejsc pracy
+       - USUWAJ wszelkie frazy lub informacje, które wyglądają na wygenerowane przez AI
+       - Naprawiaj wszelkie niespójności pomiędzy sekcjami
+       - Poprawiaj zdania, które nie mają sensu lub zawierają błędy semantyczne
     
-    5. Optymalizacja prezentacji:
+    10. Optymalizacja prezentacji:
        - Reorganizuj ISTNIEJĄCE informacje pod kątem relevance
        - Używaj bullet pointów dla lepszej czytelności
        - Podkreślaj rzeczywiste osiągnięcia powiązane z nową rolą
        - Stosuj profesjonalne formatowanie ATS-friendly
     
     ZASADY KRYTYCZNE:
+    - ⚠️ SPRAWDŹ, czy sekcje są we właściwych miejscach (np. czy doświadczenie zawodowe nie zostało umieszczone w sekcji zainteresowań)
+    - ⚠️ SPRAWDŹ, czy w tekście nie ma błędnych danych, dziwnych kodów lub losowych ciągów znaków
     - ZERO TOLERANCJI dla fikcyjnych danych
     - Każda informacja MUSI być oparta na oryginalnym CV
     - Skupiaj się na REALNYM potencjale i transferowalnych umiejętnościach
     - Używaj wyłącznie POTWIERDZONYCH osiągnięć
     - W razie wątpliwości, zachowaj oryginalną treść
+    - USUWAJ wszystkie frazy sugerujące, że tekst został wygenerowany przez AI
     
     Język odpowiedzi: zachowaj język oryginalnego CV
     
@@ -462,14 +469,39 @@ def ats_optimization_check(cv_text, job_description=""):
         context = f"Ogłoszenie o pracę dla odniesienia:\n{job_description[:2000]}"
         
     prompt = f"""
-    TASK: Sprawdź to CV pod kątem kompatybilności z systemami ATS (Applicant Tracking System) i oceń jego skuteczność.
+    TASK: Przeprowadź dogłębną analizę CV pod kątem kompatybilności z systemami ATS (Applicant Tracking System) i wykryj potencjalne problemy.
     
     Przeprowadź następujące analizy:
-    1. Wykryj potencjalne problemy z formatowaniem, które mogą utrudnić odczyt przez systemy ATS
-    2. Sprawdź gęstość słów kluczowych i trafność ich wykorzystania
-    3. Oceń strukturę CV i zaproponuj ulepszenia dla lepszej czytelności maszynowej
-    4. Zidentyfikuj brakujące sekcje lub informacje, które są często wymagane przez ATS
-    5. Oceń ogólną skuteczność CV w systemach ATS w skali 1-10
+    
+    1. WYKRYWANIE PROBLEMÓW STRUKTURALNYCH:
+       - Znajdź sekcje, które są w nieodpowiednich miejscach (np. doświadczenie zawodowe w sekcji zainteresowań)
+       - Wskaż niespójności w układzie i formatowaniu
+       - Zidentyfikuj zduplikowane informacje w różnych sekcjach
+       - Zaznacz fragmenty tekstu, które wyglądają na wygenerowane przez AI
+       - Znajdź ciągi znaków bez znaczenia lub losowe znaki
+    
+    2. ANALIZA FORMATOWANIA ATS:
+       - Wykryj problemy z formatowaniem, które mogą utrudnić odczyt przez systemy ATS
+       - Sprawdź, czy nagłówki sekcji są odpowiednio wyróżnione
+       - Zweryfikuj, czy tekst jest odpowiednio podzielony na sekcje
+       - Oceń czytelność dla systemów automatycznych
+    
+    3. ANALIZA SŁÓW KLUCZOWYCH:
+       - Sprawdź gęstość słów kluczowych i trafność ich wykorzystania
+       - Zidentyfikuj brakujące słowa kluczowe z branży/stanowiska
+       - Oceń rozmieszczenie słów kluczowych w dokumencie
+    
+    4. OCENA KOMPLETNOŚCI:
+       - Zidentyfikuj brakujące sekcje lub informacje, które są często wymagane przez ATS
+       - Wskaż informacje, które należy uzupełnić
+    
+    5. WERYFIKACJA AUTENTYCZNOŚCI:
+       - Zaznacz fragmenty, które wyglądają na sztuczne lub wygenerowane przez AI
+       - Podkreśl niespójności między różnymi częściami CV
+    
+    6. OCENA OGÓLNA:
+       - Oceń ogólną skuteczność CV w systemach ATS w skali 1-10
+       - Podaj główne powody obniżonej oceny
     
     {context}
     
@@ -477,7 +509,33 @@ def ats_optimization_check(cv_text, job_description=""):
     {cv_text}
     
     Odpowiedz w tym samym języku co CV. Jeśli CV jest po polsku, odpowiedz po polsku.
-    Format odpowiedzi powinien być przejrzysty, z wyraźnie oznaczonymi sekcjami i konkretnymi sugestiami usprawnień.
+    Format odpowiedzi:
+    
+    1. OCENA OGÓLNA (skala 1-10): [ocena]
+    
+    2. PROBLEMY KRYTYCZNE:
+    [Lista wykrytych krytycznych problemów]
+    
+    3. PROBLEMY ZE STRUKTURĄ:
+    [Lista problemów strukturalnych]
+    
+    4. PROBLEMY Z FORMATOWANIEM ATS:
+    [Lista problemów z formatowaniem]
+    
+    5. ANALIZA SŁÓW KLUCZOWYCH:
+    [Wyniki analizy słów kluczowych]
+    
+    6. BRAKUJĄCE INFORMACJE:
+    [Lista brakujących informacji]
+    
+    7. PODEJRZANE ELEMENTY:
+    [Lista elementów, które wydają się wygenerowane przez AI lub są niespójne]
+    
+    8. REKOMENDACJE NAPRAWCZE:
+    [Konkretne sugestie, jak naprawić zidentyfikowane problemy]
+    
+    9. PODSUMOWANIE:
+    [Krótkie podsumowanie i zachęta]
     """
     
     return send_api_request(prompt, max_tokens=1800)
